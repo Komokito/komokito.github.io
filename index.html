@@ -302,6 +302,20 @@ footer span{color:var(--accent);}
   .exp-body{display:block!important;}
   body{background:#fff;}
 }
+
+/* PROJECT CARDS */
+.proj-card{background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;transition:transform .2s,box-shadow .2s;}
+.proj-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);}
+.proj-header{padding:20px 22px;position:relative;overflow:hidden;}
+.proj-glow{position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.2) 0%,transparent 70%);}
+.proj-name{font-size:14px;font-weight:700;color:#fff;}
+.proj-tag{font-size:11px;margin-top:4px;font-weight:600;}
+.proj-body{padding:18px 22px;}
+.proj-desc{font-size:12.5px;color:#475569;line-height:1.7;margin-bottom:12px;}
+.proj-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px;}
+.tiktok-btn{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;color:#fff;background:#000;padding:7px 14px;border-radius:8px;text-decoration:none;transition:opacity .2s;}
+.tiktok-btn:hover{opacity:.75;}
+.agent-chip{background:#f8fafc;border-radius:8px;padding:7px 10px;border:1px solid #e2e8f0;font-size:10px;font-weight:600;color:#1e293b;}
 </style>
 </head>
 <body>
@@ -312,10 +326,11 @@ footer span{color:var(--accent);}
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#certs">Certifications</a>
-    <a href="#education">Education</a>
     <a href="#strengths">Strengths</a>
+    <a href="#education">Education</a>
+    <a href="#certs">Certifications</a>
   </div>
 </nav>
 
@@ -365,7 +380,7 @@ footer span{color:var(--accent);}
   <div class="sec-title">Professional Experience</div>
 
   <!-- Denso -->
-  <div class="exp-item open" id="exp-denso">
+  <div class="exp-item" id="exp-denso">
     <div class="exp-header" onclick="toggleExp('exp-denso')">
       <div class="exp-left">
         <div class="exp-logo b">🏭</div>
@@ -522,58 +537,181 @@ footer span{color:var(--accent);}
 </div>
 </div>
 
+<!-- AI PROJECTS -->
+<div id="projects" class="sec-wrap">
+<div class="sec-inner">
+  <div class="sec-eyebrow">Personal Builds</div>
+  <div class="sec-title">AI Projects</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+
+    <!-- Project 1: Auto Email -->
+    <div class="proj-card">
+      <div class="proj-header" style="background:linear-gradient(135deg,#0f172a,#1e3a5f);">
+        <div class="proj-glow"></div>
+        <div style="font-size:28px;margin-bottom:8px;">&#9993;&#65039;</div>
+        <div class="proj-name">Automated Email Reply System</div>
+        <div class="proj-tag" style="color:#38bdf8;">AI Automation</div>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Built an intelligent email auto-reply agent that reads incoming emails, understands context, and generates appropriate responses automatically &mdash; reducing manual email handling time significantly.</p>
+        <div class="proj-tags">
+          <span class="tag b">AI Agent</span>
+          <span class="tag g">Email Automation</span>
+          <span class="tag p">Python</span>
+        </div>
+        <a class="tiktok-btn" href="https://www.tiktok.com/@komkidd/video/7633079092182535444" target="_blank">&#9654; ดูใน TikTok</a>
+      </div>
+    </div>
+
+    <!-- Project 2: Card Game AI -->
+    <div class="proj-card">
+      <div class="proj-header" style="background:linear-gradient(135deg,#1a1040,#2d1b69);">
+        <div class="proj-glow" style="background:radial-gradient(circle,rgba(129,140,248,.2) 0%,transparent 70%);"></div>
+        <div style="font-size:28px;margin-bottom:8px;">&#127183;</div>
+        <div class="proj-name">AI Card Game Tracker &amp; Advisor</div>
+        <div class="proj-tag" style="color:#818cf8;">Computer Vision + AI Strategy</div>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Developed a real-time card game tracking system with an AI advisor that analyzes the current game state and suggests optimal plays &mdash; combining computer vision for card detection with strategic AI decision-making.</p>
+        <div class="proj-tags">
+          <span class="tag b">Computer Vision</span>
+          <span class="tag p">AI Strategy</span>
+          <span class="tag g">Real-time Tracking</span>
+        </div>
+        <a class="tiktok-btn" href="https://www.tiktok.com/@komkidd/video/7635517924349873428" target="_blank">&#9654; ดูใน TikTok</a>
+      </div>
+    </div>
+
+    <!-- Project 3: AMD Image Gen -->
+    <div class="proj-card">
+      <div class="proj-header" style="background:linear-gradient(135deg,#1c0a00,#7c2d12);">
+        <div class="proj-glow" style="background:radial-gradient(circle,rgba(251,146,60,.2) 0%,transparent 70%);"></div>
+        <div style="font-size:28px;margin-bottom:8px;">&#127912;</div>
+        <div class="proj-name">Local AI Image Generation (AMD GPU)</div>
+        <div class="proj-tag" style="color:#fb923c;">Generative AI &middot; On-Premise</div>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Set up and optimized a local AI image generation pipeline running on an AMD GPU &mdash; bypassing cloud services entirely. Configured ROCm drivers and diffusion models to generate high-quality images fully on-premise with full data privacy.</p>
+        <div class="proj-tags">
+          <span style="font-size:10px;font-weight:600;padding:2px 9px;border-radius:6px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;">AMD ROCm</span>
+          <span class="tag b">Stable Diffusion</span>
+          <span class="tag g">On-Premise AI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4: Multi AI Team -->
+    <div class="proj-card">
+      <div class="proj-header" style="background:linear-gradient(135deg,#052e16,#14532d);">
+        <div class="proj-glow" style="background:radial-gradient(circle,rgba(52,211,153,.2) 0%,transparent 70%);"></div>
+        <div style="font-size:28px;margin-bottom:8px;">&#129302;</div>
+        <div class="proj-name">Multi-Agent AI Report System</div>
+        <div class="proj-tag" style="color:#34d399;">Agentic AI &middot; Orchestration</div>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Built a multi-agent AI pipeline where 5 specialized agents collaborate to produce research reports automatically &mdash; from ideation to fact-checking.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px;">
+          <div class="agent-chip"><span style="color:#38bdf8;">&#127919;</span> Laura &mdash; <span style="color:#94a3b8;">Orchestrator</span></div>
+          <div class="agent-chip"><span style="color:#818cf8;">&#128161;</span> Idea &mdash; <span style="color:#94a3b8;">Structurer</span></div>
+          <div class="agent-chip"><span style="color:#34d399;">&#128269;</span> Research &mdash; <span style="color:#94a3b8;">Researcher</span></div>
+          <div class="agent-chip"><span style="color:#fbbf24;">&#128221;</span> Report &mdash; <span style="color:#94a3b8;">Writer</span></div>
+          <div class="agent-chip" style="grid-column:1/-1;"><span style="color:#f87171;">&#9989;</span> Recheck &mdash; <span style="color:#94a3b8;">Fact Checker</span></div>
+        </div>
+        <div class="proj-tags">
+          <span class="tag g">Agentic AI</span>
+          <span class="tag b">Multi-Agent</span>
+          <span class="tag p">Orchestration</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Project 5: This Resume -->
+  <div style="margin-top:20px;background:linear-gradient(135deg,#0f172a,#1a1040);border-radius:14px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border:1px solid rgba(56,189,248,.15);">
+    <div style="display:flex;align-items:center;gap:20px;">
+      <div style="font-size:40px;">&#127760;</div>
+      <div>
+        <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:4px;">This Resume Website</div>
+        <div style="font-size:12px;color:#94a3b8;line-height:1.65;max-width:500px;">
+          Designed and built this interactive personal portfolio from scratch &mdash; self-contained HTML with embedded assets, photo lightbox, certificate viewer, accordion experience timeline, animated skill bars, and deployed free on GitHub Pages.
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;">
+          <span style="font-size:10px;font-weight:600;padding:2px 9px;border-radius:6px;background:rgba(56,189,248,.1);color:#38bdf8;border:1px solid rgba(56,189,248,.2);">HTML / CSS / JS</span>
+          <span style="font-size:10px;font-weight:600;padding:2px 9px;border-radius:6px;background:rgba(129,140,248,.1);color:#818cf8;border:1px solid rgba(129,140,248,.2);">GitHub Pages</span>
+          <span style="font-size:10px;font-weight:600;padding:2px 9px;border-radius:6px;background:rgba(52,211,153,.1);color:#34d399;border:1px solid rgba(52,211,153,.2);">Claude AI Assisted</span>
+        </div>
+      </div>
+    </div>
+    <a href="https://komokito.github.io" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:#0f172a;background:linear-gradient(135deg,#38bdf8,#818cf8);padding:10px 20px;border-radius:10px;text-decoration:none;white-space:nowrap;">
+      &#128279; Live Site
+    </a>
+  </div>
+
+</div>
+</div>
+
 <!-- SKILLS -->
-<div id="skills" class="sec-wrap">
+<div id="skills" class="sec-wrap alt">
 <div class="sec-inner">
   <div class="sec-eyebrow">Expertise</div>
   <div class="sec-title">Technical Skills</div>
   <div class="skills-grid">
-    <div class="sk-card"><div class="sk-row"><span>Cisco SD-WAN / Meraki</span><span class="sk-pct">95%</span></div><div class="bar-bg"><div class="bar-fill" data-w="95"></div></div></div>
-    <div class="sk-card"><div class="sk-row"><span>Fortigate / UTM Firewall</span><span class="sk-pct">90%</span></div><div class="bar-bg"><div class="bar-fill" data-w="90"></div></div></div>
-    <div class="sk-card"><div class="sk-row"><span>MPLS / VLAN Design</span><span class="sk-pct">88%</span></div><div class="bar-bg"><div class="bar-fill" data-w="88"></div></div></div>
-    <div class="sk-card"><div class="sk-row"><span>Aruba Wireless</span><span class="sk-pct">85%</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
-    <div class="sk-card"><div class="sk-row"><span>Project Management (APAC)</span><span class="sk-pct">92%</span></div><div class="bar-bg"><div class="bar-fill" data-w="92"></div></div></div>
-    <div class="sk-card"><div class="sk-row"><span>MS Teams Phone / UC</span><span class="sk-pct">80%</span></div><div class="bar-bg"><div class="bar-fill" data-w="80"></div></div></div>
-    <div class="sk-card"><div class="sk-row"><span>Palo Alto / SASE</span><span class="sk-pct">75%</span></div><div class="bar-bg"><div class="bar-fill" data-w="75"></div></div></div>
-    <div class="sk-card"><div class="sk-row"><span>Budget &amp; Vendor Management</span><span class="sk-pct">85%</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
+    <div class="sk-card"><div class="sk-row"><span>Cisco SD-WAN / Meraki</span></div><div class="bar-bg"><div class="bar-fill" data-w="95"></div></div></div>
+    <div class="sk-card"><div class="sk-row"><span>Fortigate / UTM Firewall</span></div><div class="bar-bg"><div class="bar-fill" data-w="90"></div></div></div>
+    <div class="sk-card"><div class="sk-row"><span>MPLS / VLAN Design</span></div><div class="bar-bg"><div class="bar-fill" data-w="88"></div></div></div>
+    <div class="sk-card"><div class="sk-row"><span>Aruba Wireless</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
+    <div class="sk-card"><div class="sk-row"><span>Project Management (APAC)</span></div><div class="bar-bg"><div class="bar-fill" data-w="92"></div></div></div>
+    <div class="sk-card"><div class="sk-row"><span>MS Teams Phone / UC</span></div><div class="bar-bg"><div class="bar-fill" data-w="80"></div></div></div>
+    <div class="sk-card"><div class="sk-row"><span>Palo Alto / SASE</span></div><div class="bar-bg"><div class="bar-fill" data-w="75"></div></div></div>
+    <div class="sk-card"><div class="sk-row"><span>Budget &amp; Vendor Management</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
   </div>
 </div>
 </div>
 
-<!-- CERTIFICATIONS -->
-<div id="certs" class="sec-wrap alt">
+<!-- STRENGTHS -->
+<div id="strengths" class="sec-wrap">
 <div class="sec-inner">
-  <div class="sec-eyebrow">Credentials</div>
-  <div class="sec-title">Certifications</div>
-  <div class="certs-grid">
-    <div class="cert-card" onclick="openCert('agentic')" style="cursor:pointer" title="Click to view certificate">
-      <div class="cert-icon">🤖</div>
-      <div class="cert-name">Agentic AI</div>
-      <div class="cert-org">DeepLearning.AI</div>
-      <div class="cert-date">Issued March 2, 2026</div>
-      <div class="cert-id">ID: 4cc1ba09-5815-4784-8158-340316f3b990</div>
+  <div class="sec-eyebrow">What Sets Me Apart</div>
+  <div class="sec-title">Core Strengths</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+    <div style="background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:14px;padding:28px;border:1px solid rgba(255,255,255,.07);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 44px rgba(0,0,0,.25)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.15) 0%,transparent 70%);"></div>
+      <div style="font-size:36px;margin-bottom:14px;">&#128218;</div>
+      <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;">Lifelong Learner</div>
+      <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
+        Deeply passionate about acquiring new knowledge and skills. From network certifications to AI courses &mdash; constantly evolving to stay ahead of the technology curve.
+      </div>
+      <div style="margin-top:14px;font-size:10px;font-weight:700;color:#38bdf8;letter-spacing:1px;text-transform:uppercase;">Always Growing</div>
     </div>
-    <div class="cert-card" onclick="openCert('python')" style="cursor:pointer" title="Click to view certificate">
-      <div class="cert-icon">🐍</div>
-      <div class="cert-name">AI Python for Beginners</div>
-      <div class="cert-org">DeepLearning.AI</div>
-      <div class="cert-date">Issued January 3, 2026</div>
-      <div class="cert-id">ID: ff507096-75be-4121-802a-39fbfb4f9bae</div>
+
+    <div style="background:linear-gradient(135deg,#1a1040,#2d1b69);border-radius:14px;padding:28px;border:1px solid rgba(129,140,248,.15);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 44px rgba(0,0,0,.25)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(129,140,248,.15) 0%,transparent 70%);"></div>
+      <div style="font-size:36px;margin-bottom:14px;">&#9889;</div>
+      <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;">High-Velocity Executor</div>
+      <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
+        Known for speed and decisiveness in delivering results. Can rapidly assess complex situations, prioritize effectively, and execute solutions &mdash; getting things done without losing momentum.
+      </div>
+      <div style="margin-top:14px;font-size:10px;font-weight:700;color:#818cf8;letter-spacing:1px;text-transform:uppercase;">Fast &amp; Decisive</div>
     </div>
-    <div class="cert-card" onclick="openCert('everyone')" style="cursor:pointer" title="Click to view certificate">
-      <div class="cert-icon">💡</div>
-      <div class="cert-name">AI for Everyone</div>
-      <div class="cert-org">DeepLearning.AI</div>
-      <div class="cert-date">Issued February 15, 2026</div>
-      <div class="cert-id">ID: fb16164a-fbdc-4cd8-a49a-93a2e33e9a4c</div>
+
+    <div style="background:linear-gradient(135deg,#052e16,#14532d);border-radius:14px;padding:28px;border:1px solid rgba(52,211,153,.15);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 44px rgba(0,0,0,.25)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.15) 0%,transparent 70%);"></div>
+      <div style="font-size:36px;margin-bottom:14px;">&#127979;</div>
+      <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;">Natural Mentor</div>
+      <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
+        With 7+ years of tutoring Math, Physics &amp; Electronics, teaching is second nature. Excels at breaking down complex technical concepts and empowering teams to grow and succeed.
+      </div>
+      <div style="margin-top:14px;font-size:10px;font-weight:700;color:#34d399;letter-spacing:1px;text-transform:uppercase;">Lead &amp; Inspire</div>
     </div>
+
   </div>
-  <!-- Extra certs -->
 </div>
 </div>
 
 <!-- EDUCATION -->
-<div id="education" class="sec-wrap">
+<div id="education" class="sec-wrap alt">
 <div class="sec-inner">
   <div class="sec-eyebrow">Academic Background</div>
   <div class="sec-title">Education</div>
@@ -628,44 +766,36 @@ footer span{color:var(--accent);}
 </div>
 
 
-<!-- STRENGTHS -->
-<div id="strengths" class="sec-wrap alt">
+
+<!-- CERTIFICATIONS -->
+<div id="certs" class="sec-wrap">
 <div class="sec-inner">
-  <div class="sec-eyebrow">What Sets Me Apart</div>
-  <div class="sec-title">Core Strengths</div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
-
-    <div style="background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:14px;padding:28px;border:1px solid rgba(255,255,255,.07);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 44px rgba(0,0,0,.25)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-      <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.15) 0%,transparent 70%);"></div>
-      <div style="font-size:36px;margin-bottom:14px;">&#128218;</div>
-      <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;">Lifelong Learner</div>
-      <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
-        Deeply passionate about acquiring new knowledge and skills. From network certifications to AI courses &mdash; constantly evolving to stay ahead of the technology curve.
-      </div>
-      <div style="margin-top:14px;font-size:10px;font-weight:700;color:#38bdf8;letter-spacing:1px;text-transform:uppercase;">Always Growing</div>
+  <div class="sec-eyebrow">Credentials</div>
+  <div class="sec-title">Certifications</div>
+  <div class="certs-grid">
+    <div class="cert-card" onclick="openCert('agentic')" style="cursor:pointer" title="Click to view certificate">
+      <div class="cert-icon">🤖</div>
+      <div class="cert-name">Agentic AI</div>
+      <div class="cert-org">DeepLearning.AI</div>
+      <div class="cert-date">Issued March 2, 2026</div>
+      <div class="cert-id">ID: 4cc1ba09-5815-4784-8158-340316f3b990</div>
     </div>
-
-    <div style="background:linear-gradient(135deg,#1a1040,#2d1b69);border-radius:14px;padding:28px;border:1px solid rgba(129,140,248,.15);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 44px rgba(0,0,0,.25)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-      <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(129,140,248,.15) 0%,transparent 70%);"></div>
-      <div style="font-size:36px;margin-bottom:14px;">&#9889;</div>
-      <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;">High-Velocity Executor</div>
-      <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
-        Known for speed and decisiveness in delivering results. Can rapidly assess complex situations, prioritize effectively, and execute solutions &mdash; getting things done without losing momentum.
-      </div>
-      <div style="margin-top:14px;font-size:10px;font-weight:700;color:#818cf8;letter-spacing:1px;text-transform:uppercase;">Fast &amp; Decisive</div>
+    <div class="cert-card" onclick="openCert('python')" style="cursor:pointer" title="Click to view certificate">
+      <div class="cert-icon">🐍</div>
+      <div class="cert-name">AI Python for Beginners</div>
+      <div class="cert-org">DeepLearning.AI</div>
+      <div class="cert-date">Issued January 3, 2026</div>
+      <div class="cert-id">ID: ff507096-75be-4121-802a-39fbfb4f9bae</div>
     </div>
-
-    <div style="background:linear-gradient(135deg,#052e16,#14532d);border-radius:14px;padding:28px;border:1px solid rgba(52,211,153,.15);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 44px rgba(0,0,0,.25)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-      <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.15) 0%,transparent 70%);"></div>
-      <div style="font-size:36px;margin-bottom:14px;">&#127979;</div>
-      <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;">Natural Mentor</div>
-      <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
-        With 7+ years of tutoring Math, Physics &amp; Electronics, teaching is second nature. Excels at breaking down complex technical concepts and empowering teams to grow and succeed.
-      </div>
-      <div style="margin-top:14px;font-size:10px;font-weight:700;color:#34d399;letter-spacing:1px;text-transform:uppercase;">Lead &amp; Inspire</div>
+    <div class="cert-card" onclick="openCert('everyone')" style="cursor:pointer" title="Click to view certificate">
+      <div class="cert-icon">💡</div>
+      <div class="cert-name">AI for Everyone</div>
+      <div class="cert-org">DeepLearning.AI</div>
+      <div class="cert-date">Issued February 15, 2026</div>
+      <div class="cert-id">ID: fb16164a-fbdc-4cd8-a49a-93a2e33e9a4c</div>
     </div>
-
   </div>
+  <!-- Extra certs -->
 </div>
 </div>
 
