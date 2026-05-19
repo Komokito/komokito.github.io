@@ -291,7 +291,9 @@ footer span{color:var(--accent);}
   .photo-wrap{margin:0 auto;}
   .hero-stats{justify-content:center;}
   .hero-tags{justify-content:center;}
-  .skills-grid,.certs-grid,.edu-grid{grid-template-columns:1fr;}
+  .skills-grid,.certs-grid,.edu-grid,.strengths-grid,.proj-card+.proj-card{grid-template-columns:1fr;}
+  .strengths-grid{grid-template-columns:1fr;}
+  .proj-grid{grid-template-columns:1fr;}
   .navbar{padding:0 20px;}
   .sec-inner{padding:0 20px;}
   .hero{padding:90px 20px 60px;}
@@ -304,6 +306,8 @@ footer span{color:var(--accent);}
 }
 
 /* PROJECT CARDS */
+.strengths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 .proj-card{background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;transition:transform .2s,box-shadow .2s;}
 .proj-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);}
 .proj-header{padding:20px 22px;position:relative;overflow:hidden;}
@@ -542,7 +546,7 @@ footer span{color:var(--accent);}
 <div class="sec-inner">
   <div class="sec-eyebrow">Personal Builds</div>
   <div class="sec-title">AI Projects</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+  <div class="proj-grid">
 
     <!-- Project 1: Auto Email -->
     <div class="proj-card">
@@ -674,7 +678,7 @@ footer span{color:var(--accent);}
 <div class="sec-inner">
   <div class="sec-eyebrow">What Sets Me Apart</div>
   <div class="sec-title">Core Strengths</div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+  <div class="strengths-grid">
 
     <div style="background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:14px;padding:28px;border:1px solid rgba(255,255,255,.07);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 44px rgba(0,0,0,.25)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
       <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.15) 0%,transparent 70%);"></div>
